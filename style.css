@@ -53,3 +53,10 @@ button:hover {
     color: rgb(224, 221, 15);
     transition-delay: 1s;
 }
+
+#reverseWords-button:hover {
+    unicode-bidi:bidi-override;
+    direction:rtl;
+    
+
+}
