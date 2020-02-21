@@ -6,6 +6,7 @@ debugger; // step through loading & testing
   reverse the characters in each word, but leave the sentence in order
 */
 function reverseWords(str) {
+  return str.split(" ").map(word => word.split("").reverse().join("")).join(" ");
 
 }
 
@@ -33,12 +34,16 @@ function reverseWordsHandler() {
   debugger; // step through user actions
 
   // read & process user input
+  let text = prompt("Type wanted text");
+
 
 
   // execute core logic
+  let result = reverseWords(text);
 
 
   // display result to user
+  alert(result);
 
 
   // log action for developer
