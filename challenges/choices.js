@@ -4,6 +4,15 @@ debugger; // step through loading & testing
 // first argument is any string
 // second argument is what to do to that string
 function choices(str, option) {
+  if (option === "big") {
+    return str.toUpperCase();
+  } else if (option === "small") {
+    return str.toLowerCase();
+  } else if (option === "slim") {
+    return str.trim();
+  } else {
+    return "invalid option";
+  }
 
 }
 
@@ -39,10 +48,14 @@ function choicesHandler() {
   debugger; // step through user actions
 
   // read & process user input
+  let text = prompt("Type wanted text.");
+  let option = prompt("Choose between 'big', 'small' and 'slim' option, to convert your text.")
 
   // execute core logic
+  let result = choices(text, option);
 
   // display result to user
+  alert(result);
 
   // log action for developer
   console.log('\n-- choices --');
