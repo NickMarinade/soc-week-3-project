@@ -9,6 +9,7 @@ debugger; // step through loading & testing
   to sort strings you rearrange the characters in charCode order
 */
 function sortCharacters(str) {
+  return str.split("").sort().join("");
 
 }
 
@@ -37,12 +38,15 @@ function sortCharactersHandler() {
   debugger; // step through user actions
 
   // read & process user input
+  text = prompt("Type what need to be sorted")
 
 
   // execute core logic
+  result = sortCharacters(text);
 
 
   // display result to user
+  alert(result);
 
 
   // log action for developer
